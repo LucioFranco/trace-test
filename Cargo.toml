@@ -1,0 +1,17 @@
+[package]
+name = "trace-test"
+version = "0.1.0"
+authors = ["Lucio Franco <luciofranco14@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+futures = "0.1"
+tokio = "0.1"
+tokio-trace = { git = "https://github.com/tokio-rs/tokio" }
+tokio-trace-futures = { git = "https://github.com/tokio-rs/tokio-trace-nursery" }
+# tokio-trace-fmt = { git = "https://github.com/tokio-rs/tokio-trace-nursery" }
+tokio-trace-fmt = { path = "../tokio-trace-nursery/tokio-trace-fmt" }
+tokio-trace-env-logger = { git = "https://github.com/tokio-rs/tokio-trace-nursery" }
+
+[patch.crates-io]
+tokio-trace = { git = "https://github.com/tokio-rs/tokio" }
